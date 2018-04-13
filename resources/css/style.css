@@ -22,9 +22,16 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
-}   
-h1{
-    margin:0;
+}
+h1 {
+    margin-top:0;
+    margin-bottom:20px;
+    color: #fff; /* White */
+    font-size: 240%; /* relative to the html base font size */
+    font-weight: 300; /* for very big font size, font weight needs to be decreased */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
 }
 .hero-text-box {
     position: absolute;
@@ -32,4 +39,41 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%)
+}
+
+.btn:link,
+.btn:visited {
+    /* 
+    elements are of 2 types. inline or block element.
+    mixed type = inline block - normal inline element but 
+    with margin and padding and no line break.*/
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1px solid orange;
+    transition:background-color 1s, color 1s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: orange;
+    color: #fff;
+    margin-right:15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: orange;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: white;
 }
