@@ -1,66 +1,58 @@
-
+/*  --------------------------------------------------------------*/
+/*  BASIC SETUP */
+/*  --------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html {
-    background-color: #fff;  
-    color: #555;  
+    background-color: #fff;
+    color: #555;
     font-family: 'Lato','Arial',sans-serif;
-    font-size: 20px;  
-    font-weight: 300;   
-    text-rendering:optimizeLegibility; 
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
 }
+/*  --------------------------------------------------------------*/
+/*  REUSABLE COMPONENTS */
+/*  --------------------------------------------------------------*/
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
-
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
+/* -------HEADINGS------- */
 h1 {
-    margin-top:0;
-    margin-bottom:20px;
-    color: #fff; /* White */
-    font-size: 240%; /* relative to the html base font size */
-    font-weight: 300; /* for very big font size, font weight needs to be decreased */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 3px;
 }
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)
-}
 
+/* -------BUTTONS------- */
 .btn:link,
 .btn:visited {
-    /* 
-    elements are of 2 types. inline or block element.
-    mixed type = inline block - normal inline element but 
-    with margin and padding and no line break.*/
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
     border: 1px solid orange;
-    transition:background-color 1s, color 1s;
+    -webkit-transition: background-color 1s, color 1s;
+    transition: background-color 1s, color 1s;
 }
 
 .btn-full:link,
 .btn-full:visited {
     background-color: orange;
     color: #fff;
-    margin-right:15px;
+    margin-right: 15px;
 }
 
 .btn-ghost:link,
@@ -76,4 +68,25 @@ h1 {
 .btn-ghost:hover,
 .btn-ghost:active {
     color: white;
+}
+
+/*  --------------------------------------------------------------*/
+/*  HEADER */
+/*  --------------------------------------------------------------*/
+
+header {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.5)),to(rgba(0, 0, 0, 0.5))),url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
 }
