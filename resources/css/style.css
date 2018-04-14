@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -89,6 +90,7 @@ h2:after{
     text-decoration: none;
     border-radius: 200px;
     border: 1px solid orange;
+    -webkit-transition: background-color 1s, color 1s;
     transition: background-color 1s, color 1s;
 }
 
@@ -119,6 +121,7 @@ h2:after{
 /*  --------------------------------------------------------------*/
 
 header {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.5)),to(rgba(0, 0, 0, 0.5))),url(img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
     height: 100vh;
     background-size: cover;
@@ -130,6 +133,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
@@ -160,11 +164,34 @@ header {
     color: #fff;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
 .main-nav li a:active,
 .main-nav li a:hover {
     border-bottom: 2px solid orange;    
+}
+
+/* -------MEALS------- */
+.section-meals{
+padding:0;
+}
+
+.list-meals {
+    list-style: none;
+}
+
+.list-meals li {
+    float: left;
+    display: inline-block;
+    width: 25%;
+}
+.img-meal {
+    margin: 0;  
+    width: 100%; 
+}
+.img-meal img {
+    width: 100%;  
 }
 
