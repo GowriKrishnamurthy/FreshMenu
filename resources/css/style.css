@@ -92,6 +92,18 @@ h2:after{
     color:orange;
     margin-bottom:10px;
 }
+.small-icon {
+    color: orange;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
 /* -------LINKS------- */
 
 /* -------BUTTONS------- */
@@ -224,7 +236,7 @@ padding:0;
 
 /* -------HOW IT WORKS ------- */
 .section-steps {
-    background-color: #f4f4f4;/*subtle grey color - differentiates from next section*/
+    background-color: #f4f4f4; 
 }
 
 .steps-box {
@@ -288,17 +300,6 @@ padding:0;
 .city-feature {
     margin-bottom: 5px;
 }
-.city-feature i {
-    color: orange;
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-    font-size: 120%;
-    margin-right:10px;
-    line-height: 120%;
-    vertical-align: middle;
-    margin-top:-5px;
-}
 
 .city-feature:last-of-type a:link,
 .city-feature:last-of-type a:visited {
@@ -331,16 +332,20 @@ blockquote {
     font-style: italic; 
     line-height: 140%;
     padding:2%;
+    position:relative;
 }
 cite {
     display: block;
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 90%;
 }
 blockquote:before {
     content: '\201C';
-    font-size:400%;
-    display:block; 
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    top:0;
+    left:-3px;
 }
 cite img {
     border-radius: 50%;
@@ -349,3 +354,44 @@ cite img {
     vertical-align:middle;
 }
 
+/* -------SIGNUP------- */
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    background-color:white;
+    border-radius:5px;
+    width:90%;
+    margin-left:5%; /* remaining 5% of 10% of width*/
+    -webkit-box-shadow:0 2px 2px #efefef;
+    box-shadow:0 2px 2px #efefef;
+}
+
+.plan-box div{
+    padding:15px;
+    border-bottom:1px solid #e8e8e8;
+}
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}        
+.plan-box div:last-child {
+    text-align: center;
+    border-bottom: none;
+}
+
+.plan-price {
+    font-size:200%;
+    margin-bottom:10px;
+    color: orange;
+}
+
+.plan-price span {
+    font-size: 50%; /* 50% of parent font-size(200%), not the base font-size(20px)*/
+    text-align: right;
+}
+.plan-box ul{
+    list-style:none; 
+}
