@@ -330,8 +330,8 @@ padding:0;
     background-attachment: fixed;
     background-size: cover;
     color: white;
-    height: 100vh;
     background-attachment: fixed;
+    height: 500px;
 }
 
 blockquote {
