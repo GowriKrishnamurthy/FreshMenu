@@ -20,6 +20,7 @@ $(document).ready(function () {
     });
 
     /* NAVIGATION SCROLL */
+    // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')
@@ -73,4 +74,21 @@ $(document).ready(function () {
         $('.js--wp-plans').addClass('animated pulse');
     }, { offset: '50%' });
 
+    /*Maps*/
+    var map = new GMaps({
+        div: '.map',
+        lat: -37.902975,
+        lng: 145.174216,
+        zoom:12
+    });
+
+    map.addMarker({
+        lat: -37.902975,
+        lng: 145.12,
+        title: 'ViewMount Road',
+        infoWindow: {
+            content: '<p>Our Melbourne head quarters</p>'
+        }
+    });
+    
 });
